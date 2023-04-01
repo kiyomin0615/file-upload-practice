@@ -16,12 +16,14 @@
     </section>
     <section id="user-profiles">
       <ul>
-        <li class="user-item">
-          <article>
-            <img src="" alt="유저 이미지">
-            <h2>User Name</h2>
-          </article>
-        </li>
+        <% for (let user of users) {%>
+          <li class="user-item">
+            <article>
+              <img src="<%= user.path %>" alt="유저 이미지">
+              <h2><%= user.name %></h2>
+            </article>
+          </li>
+        <% } %>
       </ul>
     </section>
   </main>

@@ -10,14 +10,16 @@
 </head>
 <body>
   <main id="new-user">
-    <form action="">
+    <!-- 파일 데이터 전송 -->
+    <form action="/profiles" method="POST" enctype="multipart/form-data">
       <div class="form-control">
         <label for="username">User Name</label>
-        <input type="text" id="username" name="username">
+        <input type="text" id="username" name="username" required>
       </div>
       <div class="form-control">
+        <img id="image-preview" src="" alt="유저 이미지 프리뷰">
         <label for="userimage">User Image</label>
-        <input type="file" id="userimage" name="userimage">
+        <input type="file" id="userimage" name="userimage" required accept=".png, .jpg">
       </div>
       <button class="btn">저장</button>
     </form>
